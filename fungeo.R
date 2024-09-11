@@ -11,7 +11,7 @@ pts <- lapply(1:nrow(plot_locations_HARV),function(x){
 return(pt_project)})
 df <- do.call(rbind, pts)
 st_write(df, dsn="C:/Users/jmgorzo/Documents/geology", layer="geology", driver= "ESRI Shapefile")
-
+##adding here
 arrowhead <- co[co$CTY_NAME %in% c("St. Louis", "Lake", "Cook"),]
 plot(st_geometry(arrowhead))
 plot(df[1], col='red',add=T)
